@@ -17,6 +17,9 @@ import vs from '../images/vote/vs.png'
 // import insta_icon from '../images/Section1/instagram.png'
 import Line from "./line";
 import Transitionview from "./transitionview";
+import { google } from "googleapis";
+import credentials from '../googleServiceAccount.json'
+import { db, collection, addDoc } from '../firebaseconfig';
 
 const Vote=()=>{
 
@@ -30,14 +33,31 @@ const Vote=()=>{
     ]).current
     const ca=useRef("").current
     const [showPopup,setShowPopup]=useState(false);
-    const [data,setData]=useState<{vote?:"kamala"|"trump"|undefined,comment?:string}>()
+    const [data,setData]=useState<{vote?:"Kamala Harris"|"Donald Trump"|undefined,comment?:string}>()
     const [voted,setVoted]=useState(false);
 
-    const submitVote=()=>{
+    const submitVote=async ()=>{
+        await appendData()
         setShowPopup(false)
         setData(undefined)
         setVoted(true)
     }
+
+    const appendData = async () => {
+        console.log("dasta being sent",{
+            vote:data?.vote,
+            comment:data?.comment?data.comment:""
+        })
+        try {
+            const docRef = await addDoc(collection(db, "Votes"), {
+                Vote:data?.vote,
+                Comment:data?.comment?data.comment:""
+            });
+            console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    };
 
     return(
         <section className={styles.mainwrapper} id="vote" data-scroll-to="vote">
@@ -45,16 +65,16 @@ const Vote=()=>{
                 {
                     showPopup
                     ?
-                    
+
                     <Transitionview effect="zoom">
                         <div className={styles.popup_wrapper}>
                             <div style={{flexDirection:"column",gap:10}}>
                                 <div className={styles.face_options_wrapper}>
-                                    <button onClick={()=>setData({...data,vote:"trump"})} style={{border:"none",backgroundColor:"transparent"}}><img src={trump} style={{opacity:(data?.vote && data.vote=="trump")?1:0.5}} className={styles.face_option}/></button>
-                                    <button onClick={()=>setData({...data,vote:"kamala"})} style={{border:"none",backgroundColor:"transparent"}}><img src={kamala} style={{opacity:(data?.vote && data.vote=="kamala")?1:0.5}} className={styles.face_option}/></button>
+                                    <button onClick={()=>setData({...data,vote:"Donald Trump"})} style={{border:"none",backgroundColor:"transparent"}}><img src={trump} style={{opacity:(data?.vote && data.vote=="Donald Trump")?1:0.5}} className={styles.face_option}/></button>
+                                    <button onClick={()=>setData({...data,vote:"Kamala Harris"})} style={{border:"none",backgroundColor:"transparent"}}><img src={kamala} style={{opacity:(data?.vote && data.vote=="Kamala Harris")?1:0.5}} className={styles.face_option}/></button>
                                 </div>
                             </div>
-                            <input className={styles.comment} style={{flex:1,padding:"10px"}} placeholder="Comments...."/>
+                            <input onChange={(e)=>setData({...data,comment:e.target.value})} className={styles.comment} style={{flex:1,padding:"10px"}} placeholder="Comments...."/>
                             {
                                 data && data.vote
                                 ?
