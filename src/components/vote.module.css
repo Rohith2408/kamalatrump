@@ -1,0 +1,560 @@
+.mainwrapper{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    background-image: url("../images/vote/bg.png");
+    background-color: #B41418;
+}
+  
+  .subwrapper{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .socialWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .socialicons{
+    object-fit: contain;
+    height: auto;
+  }
+
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: absolute;
+  }
+
+  .caHeading,.ca{
+    margin: 0;
+    color: black;
+    font-family: var(--font-patrick-hand);
+    
+  }
+
+  .cawrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2ca32;;
+    border-radius: 100px;
+    border: 2px solid;
+  }
+
+  .banner{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    object-fit:cover;
+    z-index: 1;
+    top: 0%;
+  }
+
+  .copyWrapper{
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .title{
+    color: #ffffff;
+    font-family: var(--font-anton);
+    margin: 0;
+    text-align: center;
+  }
+
+  .subtitle{
+    font-family: var(--font-purejoy);
+    color: white;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .title_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faces_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cast_vote_wrapper{
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 4px 4px 24px rgba(0,0,0,0.4);
+  }
+
+  .cast_vote{
+    font-family: var(--font-purejoy);
+    padding: 10px;
+    color: #0473B5;
+    margin: 0;
+  }
+
+  .popup_wrapper{
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition:transform 0.5s;
+  }
+
+  .face_options_wrapper{
+    display: flex;
+    flex-direction: row
+  }
+  
+  .submit_wrapper{
+    background-color:#E64D52;
+    border-radius: 100px;
+    box-shadow: 4px 4px 24px rgba(0,0,0,0.4);
+  }
+
+  .submit{
+    font-family: var(--font-purejoy);
+    padding: 10px;
+    color:white;
+    margin: 0;
+  }
+
+  .comment{
+    border-width: 2px;
+    border-radius: 20px;
+    font-family: var(--font-bubbler);
+  }
+
+  /* .ca{
+    max-width: 75%;
+  } */
+
+  @media screen and (max-width:500px) {
+
+    .mainwrapper{
+        max-height: 1280px;
+        min-height: 1200px;
+        background-image: url("../images/vote/bg_mobile.png");
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height:40px;
+    }
+    
+    .socialWrapper{
+        gap: 14px;
+    }
+
+    .socialicons{
+        width: 24px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:10px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:12px;
+    }
+
+    .copyIcon{
+        width:12px;
+        height: auto;
+    }
+
+    .body{
+        gap: 30px;
+    }
+
+    .title{
+        font-size:80px;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .star{
+        width: 38px;
+        height: 38px;
+    }
+
+    .face{
+        width: 300px;
+        height:300px;
+        object-fit: contain;
+    }
+
+    .faces_wrapper{
+        flex-direction: column;
+    }
+
+    .vs{
+        width: 100px;
+        height:100px;
+        object-fit: contain;
+    }
+
+    .cast_vote{
+        font-size:34px;
+        padding: 10px;
+    }
+
+    .face_option{
+        width:150px;
+        height:150px;
+    }
+
+    .face_options_wrapper{
+        flex-direction:column;
+    }
+
+    .popup_wrapper{
+        width: 300px;
+        height:600px;
+        padding: 15px;
+    }
+
+    .submit{
+        font-size:22px;
+        padding: 8px;
+    }
+
+    .comment{
+        font-size: 22px;
+    }
+
+  }
+
+  @media screen and (min-width:501px) and (max-width:1023px) {
+
+    .mainwrapper{
+        max-height: 1480px;
+        min-height: 1400px;
+        background-image: url("../images/vote/bg_mobile.png");
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height:75px;
+    }
+    
+    .socialWrapper{
+        gap: 30px;
+    }
+
+    .socialicons{
+        width:40px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:14px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:14px;
+    }
+
+    .copyIcon{
+        width:14px;
+        height: auto;
+    }
+
+    .body{
+        gap: 34px;
+    }
+
+    .title{
+        font-size:90px;
+    }
+
+    .subtitle{
+        font-size: 20px;
+    }
+
+    .star{
+        width: 44px;
+        height: 44px;
+    }
+
+    .face{
+        width: 350px;
+        height:350px;
+        object-fit: contain;
+    }
+
+    .faces_wrapper{
+        flex-direction: column;
+    }
+
+    .vs{
+        width: 140px;
+        height:140px;
+        object-fit: contain;
+    }
+
+    .cast_vote{
+        font-size:40px;
+        padding: 10px;
+    }
+
+    .face_option{
+        width:130px;
+        height:130px;
+    }
+
+    .popup_wrapper{
+        width: 400px;
+        height:400px;
+        padding: 24px;
+    }
+
+    .submit{
+        font-size:28px;
+        padding: 12px;
+    }
+
+    .comment{
+        font-size: 28px;
+    }
+  }
+
+  @media screen and (min-width:1024px) and (max-width:1920px) {
+
+    .mainwrapper{
+        max-height: 980px;
+        min-height: 900px;
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height: 150px;
+    }
+    
+    .socialWrapper{
+        gap: 40px;
+    }
+
+    .socialicons{
+        width:44px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:16px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:16px;
+    }
+
+    .copyIcon{
+        width:20px;
+        height: auto;
+    }
+
+    .body{
+        gap: 40px;
+    }
+
+    .title{
+        font-size:100px;
+    }
+
+    .subtitle{
+        font-size: 26px;
+    }
+
+    .star{
+        width: 50px;
+        height: 50px;
+    }
+
+    .face{
+        width: 400px;
+        height:400px;
+        object-fit: contain;
+    }
+
+    .faces_wrapper{
+        flex-direction: row;
+    }
+
+    .vs{
+        width: 210px;
+        height:210px;
+        object-fit: contain;
+    }
+
+    .cast_vote{
+        font-size:44px;
+        padding: 16px;
+    }
+
+    .face_option{
+        width:160px;
+        height:160px;
+    }
+
+    .popup_wrapper{
+        width: 600px;
+        height:600px;
+        padding: 24px;
+    }
+
+    .submit{
+        font-size: 34px;
+        padding: 16px;
+    }
+
+    .comment{
+        font-size: 34px;
+    }
+
+  }
+
+  @media screen and (min-width:1921px){
+
+    .mainwrapper{
+        max-height: 1080px;
+        min-height: 1080px;
+    }
+
+    .subwrapper{
+        max-width: 2200px;
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height: 200px;
+    }
+    
+    .socialWrapper{
+        gap: 60px;
+    }
+
+    .socialicons{
+        width:60px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:24px;
+    }
+
+    .copyIcon{
+        width:26px;
+        height: auto;
+    }
+
+    .body{
+        gap: 50px;
+    }
+
+    .title{
+        font-size:120px;
+    }
+
+    .subtitle{
+        font-size: 32px;
+    }
+
+    .star{
+        width: 56px;
+        height: 56px;
+    }
+
+    .face{
+        width: 450px;
+        height:450px;
+        object-fit: contain;
+    }
+
+    .faces_wrapper{
+        flex-direction: row;
+    }
+
+    .vs{
+        width: 250px;
+        height:250px;
+        object-fit: contain;
+    }
+
+    .cast_vote{
+        font-size: 50px;
+        padding: 20px;
+    }
+
+    .face_option{
+        width:200px;
+        height:200px;
+    }
+
+    .popup_wrapper{
+        width: 700px;
+        height: 700px;
+        padding: 30px;
+    }
+
+    .submit{
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .comment{
+        font-size: 40px;
+    }
+
+  }
+

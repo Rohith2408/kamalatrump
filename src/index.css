@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Average+Sans&family=Bahiana&family=Barriecito&family=Barrio&family=Bubbler+One&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +7,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --font-purejoy: "Purejoy";
+  --font-anton:"Anton";
+  --font-comictoon: "Comictoon";
+  --font-bahiana:Bahiana;
+  --font-barrio:Barrio;
+  --font-barriecito:Barrio;
+  --font-bubbler:"Bubbler One";
+  --font-average:"Average Sans";
+
+  --font-patrick-hand: "Patrick Hand";
+  --font-patrick-hand-SC: "Patrick Hand SC";
+  --font-baloo-da: "Baloo Da";
+  --font-annie-use-your-telescope: "Annie Use Your Telescope";
+  --font-comicjungleextrude: "comicjungleextrude";
+}
+
+@font-face {
+  font-family: "purejoy";
+  src: url("/public/Purejoy.ttf");
+  font-weight: 400;
 }
 
 code {

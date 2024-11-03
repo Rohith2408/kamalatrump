@@ -1,0 +1,443 @@
+.mainwrapper{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    background-image: url("../images/home/bg.png");
+    background-color: #B41418;
+}
+  
+  .subwrapper{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .socialWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .socialicons{
+    object-fit: contain;
+    height: auto;
+  }
+
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    position: absolute;
+  }
+
+  .title{
+    color: #ffffff;
+    font-family: var(--font-anton);
+    margin: 0;
+    text-align: center;
+  }
+
+  .date{
+    color: #ffffff;
+    font-family: var(--font-anton);
+    margin: 0;
+    text-align: center;
+  }
+
+  .caHeading,.ca{
+    margin: 0;
+    color: black;
+    font-family: var(--font-patrick-hand);
+    
+  }
+
+  .cawrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2ca32;;
+    border-radius: 100px;
+    border: 2px solid;
+  }
+
+  .banner{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    object-fit:cover;
+    z-index: 1;
+    top: 0%;
+  }
+
+  .subtitle{
+    font-family: var(--font-purejoy);
+    color: white;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .copyWrapper{
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .flag1{
+    position: absolute;
+    object-fit: contain;
+  }
+
+  .flag2{
+    position: absolute;
+    object-fit: contain;
+    transform: scaleX(-1);
+  }
+
+  .date_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px
+  }
+
+  /* .ca{
+    max-width: 75%;
+  } */
+
+  @media screen and (max-width:500px) {
+
+    .mainwrapper{
+        max-height: 650px;
+        min-height: 630px;
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height:40px;
+    }
+    
+    .socialWrapper{
+        gap: 14px;
+    }
+
+    .socialicons{
+        width: 24px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:10px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:12px;
+    }
+
+    .copyIcon{
+        width:12px;
+        height: auto;
+    }
+
+    .body{
+        top:5%;
+    }
+
+    .title{
+        font-size:64px;
+        max-width: 100%;
+    }
+
+    .subtitle{
+        font-size: 16px;
+        max-width: 70%;
+    }
+
+    .date{
+        font-size: 38px;
+    }
+
+    .flag1{
+        width: 700px;
+        height:700px;
+        object-fit: contain;
+        right:-20%;
+        bottom:-60%;
+        transform: rotate(0deg);
+        content: url("/src/images/home/flag_mobile.png");
+    }
+
+    .flag2{
+        width: 0px;
+        height:0px;
+        right: -10%;
+        bottom:-10%;
+        object-fit: contain;
+    }
+
+    .star{
+        width: 38px;
+        height: 38px;
+    }
+
+  }
+
+  @media screen and (min-width:501px) and (max-width:1023px) {
+
+    .mainwrapper{
+        max-height: 880px;
+        min-height: 800px;
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height:75px;
+    }
+    
+    .socialWrapper{
+        gap: 30px;
+    }
+
+    .socialicons{
+        width:40px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:14px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:14px;
+    }
+
+    .copyIcon{
+        width:14px;
+        height: auto;
+    }
+
+    .body{
+        top:5%;
+    }
+
+    .title{
+        font-size:80px;
+        max-width: 70%;
+    }
+
+    .subtitle{
+        font-size: 20px;
+        max-width: 70%;
+    }
+
+    .date{
+        font-size: 44px;
+    }
+
+    .flag1{
+        width: 900px;
+        height:900px;
+        object-fit: contain;
+        right:-10%;
+        bottom:-55%;
+        transform: rotate(0deg);
+        content: url("/src/images/home/flag_mobile.png");
+    }
+
+    .flag2{
+        width: 0px;
+        height:0px;
+        right: -10%;
+        bottom:-10%;
+        object-fit: contain;
+    }
+
+    .star{
+        width: 44px;
+        height: 44px;
+    }
+  }
+
+  @media screen and (min-width:1024px) and (max-width:1920px) {
+
+    .mainwrapper{
+        max-height: 980px;
+        min-height: 900px;
+    }
+
+    .subwrapper{
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height: 150px;
+    }
+    
+    .socialWrapper{
+        gap: 40px;
+    }
+
+    .socialicons{
+        width:44px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding:16px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:16px;
+    }
+
+    .copyIcon{
+        width:20px;
+        height: auto;
+    }
+
+    .body{
+        top:5%;
+    }
+
+    .title{
+        font-size:100px;
+        max-width: 50%;
+    }
+
+    .subtitle{
+        font-size: 28px;
+        max-width: 70%;
+    }
+
+    .date{
+        font-size: 50px;
+    }
+
+    .flag1{
+        width: 1000px;
+        height:1000px;
+        left:-10%;
+        bottom:-30%;
+        transform: rotate(-10deg);
+    }
+
+    .flag2{
+        width: 1000px;
+        height:1000px;
+        right: -10%;
+        bottom:-30%;
+        transform: rotate(10deg) scaleX(-1);
+    }
+
+    .star{
+        width: 50px;
+        height: 50px;
+    }
+
+  }
+
+  @media screen and (min-width:1921px){
+
+    .mainwrapper{
+        max-height: 1080px;
+        min-height: 1080px;
+    }
+
+    .subwrapper{
+        max-width: 2200px;
+        flex-direction: row;
+    }
+
+    .banner{
+        top:92%;
+        height: 200px;
+    }
+    
+    .socialWrapper{
+        gap: 60px;
+    }
+
+    .socialicons{
+        width:60px;
+        border-radius: 100px;
+    }
+
+    .cawrapper{
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .caHeading,.ca{
+        font-size:24px;
+    }
+
+    .copyIcon{
+        width:26px;
+        height: auto;
+    }
+
+    .body{
+        top:10%;
+    }
+
+    .title{
+        font-size:120px;
+        max-width: 50%;
+    }
+
+    .subtitle{
+        font-size: 32px;
+    }
+
+    .date{
+        font-size: 54px;
+    }
+
+    .flag1{
+        width: 1100px;
+        height:1100px;
+        left:-10%;
+        bottom:-10%;
+    }
+
+    .flag2{
+        width: 1100px;
+        height:1100px;
+        right: -10%;
+        bottom:-10%;
+    }
+
+    .star{
+        width: 56px;
+        height: 56px;
+    }
+
+  }
+
