@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBvptVd16U_iGscKoo6V6uBzNH4gWXLOJ4",
@@ -13,5 +13,25 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const voteCollection=collection(db,"Votes");
 
-export { db, collection, addDoc };
+const getAllResponses=async ()=>{
+    const querySnapshot = await getDocs(voteCollection);
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    })
+}
+
+const addResponse = async (data) => {
+    try {
+        const docRef = await addDoc(voteCollection, {
+            Vote:data?.vote,
+            Comment:data?.comment?data.comment:""
+        });
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
+}
+
+export { db, collection, addDoc,getAllResponses,addResponse };

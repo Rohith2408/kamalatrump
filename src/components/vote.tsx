@@ -18,7 +18,7 @@ import vs from '../images/vote/vs.png'
 import Line from "./line";
 import Transitionview from "./transitionview";
 import { google } from "googleapis";
-import { db, collection, addDoc } from '../firebaseconfig';
+import { db, collection, addDoc, addResponse } from '../firebaseconfig';
 
 const Vote=()=>{
 
@@ -36,27 +36,11 @@ const Vote=()=>{
     const [voted,setVoted]=useState(false);
 
     const submitVote=async ()=>{
-        await appendData()
+        await addResponse(data)
         setShowPopup(false)
         setData(undefined)
         setVoted(true)
     }
-
-    const appendData = async () => {
-        console.log("dasta being sent",{
-            vote:data?.vote,
-            comment:data?.comment?data.comment:""
-        })
-        try {
-            const docRef = await addDoc(collection(db, "Votes"), {
-                Vote:data?.vote,
-                Comment:data?.comment?data.comment:""
-            });
-            console.log("Document written with ID: ", docRef.id);
-        } catch (e) {
-            console.error("Error adding document: ", e);
-        }
-    };
 
     return(
         <section className={styles.mainwrapper} id="vote" data-scroll-to="vote">
