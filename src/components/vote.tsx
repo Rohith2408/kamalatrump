@@ -18,7 +18,6 @@ import vs from '../images/vote/vs.png'
 import Line from "./line";
 import Transitionview from "./transitionview";
 import { google } from "googleapis";
-import credentials from '../googleServiceAccount.json'
 import { db, collection, addDoc } from '../firebaseconfig';
 
 const Vote=()=>{
