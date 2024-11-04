@@ -28,6 +28,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
 
   .socialicons{
@@ -62,8 +63,7 @@
   .caHeading,.ca{
     margin: 0;
     color: black;
-    font-family: var(--font-patrick-hand);
-    
+    font-family: var(--font-anton);
   }
 
   .cawrapper{
@@ -71,7 +71,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #e2ca32;;
+    background-color: white;;
     border-radius: 100px;
     border: 2px solid;
   }
@@ -151,7 +151,7 @@
     }
 
     .caHeading,.ca{
-        font-size:12px;
+        font-size:16px;
     }
 
     .copyIcon{
@@ -182,7 +182,7 @@
         height:700px;
         object-fit: contain;
         right:-20%;
-        bottom:-60%;
+        bottom:-75%;
         transform: rotate(0deg);
         content: url("/src/images/home/flag_mobile.png");
     }
@@ -233,7 +233,7 @@
     }
 
     .caHeading,.ca{
-        font-size:14px;
+        font-size:18px;
     }
 
     .copyIcon{
@@ -264,7 +264,7 @@
         height:900px;
         object-fit: contain;
         right:-10%;
-        bottom:-55%;
+        bottom:-60%;
         transform: rotate(0deg);
         content: url("/src/images/home/flag_mobile.png");
     }
@@ -314,7 +314,7 @@
     }
 
     .caHeading,.ca{
-        font-size:16px;
+        font-size:22px;
     }
 
     .copyIcon{
@@ -395,7 +395,7 @@
     }
 
     .caHeading,.ca{
-        font-size:24px;
+        font-size:30px;
     }
 
     .copyIcon{

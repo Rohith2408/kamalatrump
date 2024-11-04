@@ -1,5 +1,4 @@
-import { getDocs } from "firebase/firestore";
-import { collection, db, getAllResponses } from "../firebaseconfig";
+import { getAllResponses } from "../firebaseconfig";
 import { useEffect } from "react";
 
 const Responses=()=>{
