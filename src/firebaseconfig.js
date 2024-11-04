@@ -17,9 +17,7 @@ const voteCollection=collection(db,"Votes");
 
 const getAllResponses=async ()=>{
     const querySnapshot = await getDocs(voteCollection);
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    })
+    return querySnapshot.docs.map((doc) =>({id:doc.id,data:doc.data()}))
 }
 
 const addResponse = async (data) => {
