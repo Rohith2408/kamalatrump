@@ -56,6 +56,16 @@ const Responses=()=>{
                                 </div>
                                 :
                                 <div>
+                                    <div  style={{display:"flex",flexDirection:"row",gap:"20px",justifyContent:"center",paddingBottom:"50px"}}>
+                                        <div style={{display:"flex",flexDirection:"column"}}>
+                                            <p className={styles.title}>{data.data.filter((item:{id:string,data:{Vote:string,Comment:string}})=>item.data.Vote=="Donald Trump").length}</p>
+                                            <p className={styles.subtitle}>Donald Trump</p>
+                                        </div>
+                                        <div style={{display:"flex",flexDirection:"column"}}>
+                                        <p className={styles.title}>{data.data.filter((item:{id:string,data:{Vote:string,Comment:string}})=>item.data.Vote=="Kamala Harris").length}</p>
+                                            <p className={styles.subtitle}>Kamala Harris</p>
+                                        </div>
+                                    </div>
                                     <div className={styles.row_wrapper}>
                                         <p className={styles.subtitle}></p>
                                         <div  style={{flex:1,display:"flex",flexDirection:"row",alignItems:"center",gap:"10px"}}>
